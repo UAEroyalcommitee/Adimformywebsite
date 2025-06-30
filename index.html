@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UAE Royal Committee - Contact Admin</title>
+</head>
+<body>
+  <h1>Welcome to the UAE Royal Committee</h1>
+  <h2>Contact Form</h2>
+  <form action="https://formspree.io/f/xyzkabcd" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
+    <input type="email" name="email" placeholder="Your Email" required><br><br>
+    <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+    <input type="hidden" name="_cc" value="82andymorgan@gmail.com">
+    <button type="submit">Send Message</button>
+  </form>
+
+  <h2>Admin Login</h2>
+  <form onsubmit="return checkAdminEmail()">
+    <input type="email" id="adminEmail" placeholder="Enter admin email" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    function checkAdminEmail() {
+      const inputEmail = document.getElementById('adminEmail').value;
+      if (inputEmail === "82andymorgan@gmail.com") {
+        alert("Welcome Admin!");
+        return true;
+      } else {
+        alert("Access Denied!");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
